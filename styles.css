@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', serif;
-  background-color: #007bff; /* Fundo azul */
 }
 
 .container {
@@ -39,18 +38,13 @@ body {
   margin-bottom: 1.5rem;
 }
 
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
 .back-button {
   display: inline-flex;
   align-items: center;
-  color: #007bff;
+  color: #57534e;
   text-decoration: none;
-  font-weight: bold;
+  font-family: 'Poppins', serif;
+  font-weight: 400;
 }
 
 .back-button:hover {
@@ -63,27 +57,100 @@ label {
   margin-right: 0.3rem; /* 8px em rem */
 }
 
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #57534e;
+  padding-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+label {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #57534e;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('assets/icons/arrow-down.png') no-repeat right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2rem;
+}
+
+.custom-file-upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem; /* Aumenta a área do botão */
+  border: 0.125rem dashed #ccc; /* Borda tracejada */
+  border-radius: 0.5rem; /* Borda arredondada */
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: #f8f9fa;
+  color: #a8a29e;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.custom-file-upload input[type='file'] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Esconde o botão */
+  cursor: pointer;
+}
+
+.upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-content i {
+  font-size: 2rem; /* Tamanho do ícone */
+  color: #007bff; /* Cor azul */
+  margin-bottom: 0.5rem;
+}
+
 input[type='text'],
 input[type='date'],
 input[type='email'],
 input[type='tel'],
+input[type='file'],
 select {
+  color: #292524;
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-sizing: border-box;
   font-size: 1rem;
+  font-weight: 400;
 }
 
 input[type='text']:focus,
 input[type='date']:focus,
 input[type='email']:focus,
 input[type='tel']:focus,
+input[type='file']:focus,
 select:focus {
-  border-color: #007bff;
+  border-color: #f3541c;
   outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 5px #f3541c;
 }
 
 .image-container {
@@ -92,7 +159,7 @@ select:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #007bff; /* Fundo azul */
+  background-color: #2135a6; /* Fundo azul */
 }
 
 .logo {
