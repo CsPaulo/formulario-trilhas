@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', serif;
+  background-color: #007bff; /* Fundo azul */
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.form-container {
+  background-color: #fff;
+  flex: 1;
+  width: 48rem; /* 656px em rem */
+  padding: 4rem;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  overflow-y: auto; /* Adiciona rolagem vertical */
+  max-height: 100vh; /* Define a altura máxima */
+}
+
+/* Esconde a barra de rolagem no WebKit (Chrome, Safari) */
+.form-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Esconde a barra de rolagem no Firefox */
+.form-container {
+  scrollbar-width: none; /* Firefox */
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  color: #0056b3;
+}
+
+.back-icon {
+  width: 1.5rem; /* 16px em rem */
+  height: 1.5rem; /* 16px em rem */
+  margin-right: 0.3rem; /* 8px em rem */
+}
+
+input[type='text'],
+input[type='date'],
+input[type='email'],
+input[type='tel'],
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+input[type='text']:focus,
+input[type='date']:focus,
+input[type='email']:focus,
+input[type='tel']:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff; /* Fundo azul */
+}
+
+.logo {
+  max-width: 30%;
+  height: auto;
+  padding: 0;
+}
+
+.imagem {
+  max-width: 80%;
+  height: auto;
+  padding: 0; /* Removendo valores incorretos */
+}
