@@ -60,6 +60,7 @@
         </div>
 
         <!-- Campo: Documento de Identidade -->
+        <label for="identidade">Documento de identidade</label>
         <div class="form-group">
           <label for="identidade" class="custom-file-upload">
             <div class="upload-content">
@@ -71,6 +72,48 @@
             <input type="file" id="identidade" name="identidade" />
           </label>
         </div>
+
+
+        <h2>Endereço Residencial</h2>
+
+        <div class="form-group">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" name="cep" placeholder="" />
+        </div>
+
+        <div class="form-group" id="fourLabel">
+          <div>
+            <label for="rua">Rua</label>
+            <input type="text" id="rua" name="rua" placeholder="" />
+            
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" placeholder="" />
+            
+          </div>
+
+          <div>
+            <label for="numero">Número</label>
+            <input type="text" id="numero" name="numero" placeholder="" />
+
+            <label for="estado">Estado</label>
+            <input type="text" id="estado" name="estado" placeholder="" />
+          </div>
+        </div>
+
+        <label for="identidade">Comprovante de residência</label>
+        <div class="form-group">
+          <label for="comprovanteResidencal" class="custom-file-upload">
+            <div class="upload-content">
+              <img src="assets\icons\cloud-upload.png" alt="Upload Icon" class="upload-icon" />
+              <!-- Ícone -->
+              <p>Clique ou arraste um arquivo aqui</p>
+              <!-- Texto -->
+            </div>
+            <input type="file" id="comprovanteResidencal" name="comprovanteResidencal" />
+          </label>
+
+        </div>
+
       </div>
       <div class="image-container">
         <img src="assets\ilustrations\Ilustration.png" alt="Ilustração" class="imagem" />
