@@ -110,11 +110,10 @@ select {
 
 .custom-file-upload {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 3rem;
+  padding: 3.5rem 0 0 0;
   border: 0.125rem dashed var(--color-border);
   border-radius: 0.5rem;
   box-sizing: border-box;
@@ -128,9 +127,8 @@ select {
 }
 
 .custom-file-upload input[type='file'] {
-  visibility: hidden;
+  display: none;
 }
-
 .upload-content {
   display: flex;
   flex-direction: column;
