@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --color-primary: #2135a6;
@@ -15,7 +15,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', serif;
+  font-family: "Poppins", serif;
   font-size: 16px; /* Define a base para rem */
 }
 
@@ -54,7 +54,7 @@ body {
   align-items: center;
   color: var(--color-text);
   text-decoration: none;
-  font-family: 'Poppins', serif;
+  font-family: "Poppins", serif;
   font-weight: 400;
 }
 
@@ -103,7 +103,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url('assets/icons/arrow-down.png') no-repeat right 0.75rem center;
+  background: url("assets/icons/arrow-down.png") no-repeat right 0.75rem center;
   background-size: 1rem;
   padding-right: 2rem;
 }
@@ -126,7 +126,7 @@ select {
   position: relative; /* Adicionado para posicionar o input corretamente */
 }
 
-.custom-file-upload input[type='file'] {
+.custom-file-upload input[type="file"] {
   display: none;
 }
 .upload-content {
@@ -141,11 +141,11 @@ select {
   margin-bottom: 0.1rem;
 }
 
-input[type='text'],
-input[type='date'],
-input[type='email'],
-input[type='tel'],
-input[type='file'],
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
 select {
   color: #292524;
   width: 100%;
@@ -157,11 +157,11 @@ select {
   font-weight: 400;
 }
 
-input[type='text']:focus,
-input[type='date']:focus,
-input[type='email']:focus,
-input[type='tel']:focus,
-input[type='file']:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="file"]:focus,
 select:focus {
   border-color: var(--color-secondary);
   outline: none;
@@ -248,7 +248,7 @@ select:focus {
 }
 
 .cartaoSelect::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0.625rem; /* Posiciona a bolinha no canto superior esquerdo */
   left: 0.625rem; /* Posiciona a bolinha no canto superior esquerdo */
@@ -271,21 +271,21 @@ select:focus {
   margin-bottom: 1rem;
 }
 
-.selecionarTrilha input[type='radio'] {
+.selecionarTrilha input[type="radio"] {
   display: none;
 }
 
-.selecionarTrilha input[type='radio']:checked + .cartaoSelect {
+.selecionarTrilha input[type="radio"]:checked + .cartaoSelect {
   border-color: var(--color-checked);
   box-shadow: 0 0 0.625rem rgba(255, 87, 34, 0.5);
 }
 
-.selecionarTrilha input[type='radio']:checked + .cartaoSelect::before {
+.selecionarTrilha input[type="radio"]:checked + .cartaoSelect::before {
   display: none;
 }
 
-.selecionarTrilha input[type='radio']:checked + .cartaoSelect::after {
-  content: '✔';
+.selecionarTrilha input[type="radio"]:checked + .cartaoSelect::after {
+  content: "✔";
   position: absolute;
   top: 0.625rem;
   left: 0.625rem;
@@ -297,12 +297,12 @@ select:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
   font-size: 1rem;
   font-weight: 500;
 }
 
-.form-group input[type='checkbox'] {
+.form-group input[type="checkbox"] {
   margin-top: 2rem;
   appearance: none;
   width: 1rem;
@@ -314,13 +314,13 @@ select:focus {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.form-group input[type='checkbox']:checked {
+.form-group input[type="checkbox"]:checked {
   background-color: var(--color-checked);
   border-color: var(--color-checked);
 }
 
-.form-group input[type='checkbox']:checked::before {
-  content: '✔';
+.form-group input[type="checkbox"]:checked::before {
+  content: "✔";
   color: var(--color-background);
   position: absolute;
   top: 50%;
@@ -372,4 +372,14 @@ select:focus {
 
 .btn-inscricao:hover {
   background-color: var(--color-hover);
+}
+
+.error {
+  border: 2px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
 }
