@@ -18,7 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
       input.classList.add("error");
       const message = document.createElement("div");
       message.classList.add("error-message");
-      message.textContent = getErrorMessage(input);
+
+      const icon = document.createElement("img");
+      icon.classList.add("error-icon");
+      icon.src = "assets/icons/alert-circle.png";
+      icon.alt = "Erro";
+      message.appendChild(icon);
+      message.appendChild(document.createTextNode(getErrorMessage(input)));
       input.after(message);
     } else {
       input.classList.remove("error");
@@ -27,14 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function getErrorMessage(input) {
     if (input.validity.valueMissing) {
-      return "Este campo é obrigatório.";
+      return " Este campo é obrigatório.";
     }
     if (input.validity.typeMismatch) {
-      return "Por favor, insira um valor válido.";
+      return " Por favor, insira um valor válido.";
     }
     if (input.validity.patternMismatch) {
-      return "Por favor, siga o formato solicitado.";
+      return " Por favor, siga o formato solicitado.";
     }
-    return "Valor inválido.";
+    return " Valor inválido.";
   }
 });
