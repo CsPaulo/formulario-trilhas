@@ -10,9 +10,14 @@
   --color-shadow: rgba(0, 0, 0, 0.1);
   --color-hover: #0056b3;
   --color-checked: #ff5722;
+  --color-error: #dc2626;
 }
 
 body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   margin: 0;
   padding: 0;
   font-family: "Poppins", serif;
@@ -373,7 +378,7 @@ select:focus {
 }
 
 .btn-inscricao:hover {
-  background-color: var(--color-hover);
+  background-color: rgb(252, 140, 93);
 }
 
 .error-icon {
@@ -382,7 +387,7 @@ select:focus {
   width: 1rem;
   height: 1rem;
 }
-.error {
+input.error {
   border: 2px solid red;
 }
 
