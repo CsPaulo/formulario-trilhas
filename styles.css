@@ -305,6 +305,7 @@ select:focus {
 
 .form-group input[type="checkbox"] {
   margin-top: 2rem;
+  margin-bottom: -0.145rem;
   appearance: none;
   width: 1rem;
   height: 1rem;
@@ -374,7 +375,10 @@ select:focus {
 .btn-inscricao:hover {
   background-color: var(--color-hover);
 }
+
 .error-icon {
+  margin-top: 0.17rem;
+  margin-right: 0.2rem;
   width: 1rem;
   height: 1rem;
 }
@@ -385,7 +389,7 @@ select:focus {
 .error-message {
   color: red;
   font-size: 0.9em;
-  margin-top: 5px;
+  margin-top: 0.5rem;
   display: flex;
-  flex-direcection: row;
+  flex-direction: row;
 }
