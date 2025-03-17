@@ -32,7 +32,7 @@
         <!-- Campo: CPF -->
         <div class="form-group">
           <label for="cpf">CPF</label>
-          <input type="text" id="cpf" name="cpf" placeholder="" required />
+          <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required />
         </div>
 
         <!-- Campo: Sexo -->
@@ -56,7 +56,7 @@
         <!-- Campo: Telefone -->
         <div class="form-group">
           <label for="telefone">Telefone</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required />
+          <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" pattern="\(\d{2}\) \d{5}-\d{4}" required />
         </div>
 
         <!-- Campo: Documento de Identidade -->
