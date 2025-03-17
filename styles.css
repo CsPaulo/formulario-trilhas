@@ -11,6 +11,7 @@
   --color-hover: #0056b3;
   --color-checked: #ff5722;
   --color-error: #dc2626;
+  --color-buttonhover: rgb(184, 62, 10);
 }
 
 body {
@@ -342,7 +343,7 @@ select:focus {
 }
 
 .form-group label a:hover {
-  color: var(--color-hover);
+  color: var(--color-buttonhover);
 }
 
 .button-group {
@@ -378,7 +379,7 @@ select:focus {
 }
 
 .btn-inscricao:hover {
-  background-color: rgb(252, 140, 93);
+  background-color: var(--color-buttonhover);
 }
 
 .error-icon {
