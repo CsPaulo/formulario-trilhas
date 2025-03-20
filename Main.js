@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function preencherCampos() {
   const cep = document.getElementById("cep").value;
-  if (cep % 1 == 0) {
+  if (cep / 1 == cep && cep / 1 != 0) {
     document.getElementById("rua").value = "Rua Existente X";
     document.getElementById("cidade").value = "Imperatriz";
     document.getElementById("estado").value = "Maranhão";

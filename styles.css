@@ -12,6 +12,8 @@
   --color-checked: #ff5722;
   --color-error: #dc2626;
   --color-buttonhover: rgb(184, 62, 10);
+  --color-disablesurface: #e7e5e4;
+  --color-bordersurface: #d6d3d1;
 }
 
 body {
@@ -396,5 +398,6 @@ input.error {
 #estado,
 #rua,
 #cidade label {
-  background-color: #b0b0b0;
+  background-color: var(--color-disablesurface);
+  border: var(--color-bordersurface);
 }
