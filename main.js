@@ -44,3 +44,17 @@ document.addEventListener("DOMContentLoaded", () => {
       return "Valor inválido.";
     }
   });
+
+
+  function preencherCampos() {
+    const cep = document.getElementById('cep').value;
+    if (cep % 1 == 0) {
+        document.getElementById('rua').value = 'Rua Existente X';
+        document.getElementById('cidade').value = 'Imperatriz';
+        document.getElementById('estado').value = 'Maranhão';
+
+        document.getElementById('rua').readOnly = true;
+        document.getElementById('cidade').readOnly = true;
+        document.getElementById('estado').readOnly = true;
+    }
+}

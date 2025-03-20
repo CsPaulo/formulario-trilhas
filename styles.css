@@ -223,6 +223,8 @@ select:focus {
   width: 100%;
 }
 
+
+
 .selecionarTrilha {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); /* Cartões com largura mínima de 19rem */
@@ -391,4 +393,8 @@ input.error {
   margin-top: 0.5rem;
   display: flex;
   flex-direction: row;
+}
+
+#cidade, #estado, #rua, #cidade label{
+  background-color: #b0b0b0;
 }
