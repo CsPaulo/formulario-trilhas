@@ -24,7 +24,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", serif;
-  font-size: 16px; /* Define a base para rem */
+  font-size: 16px;
 }
 
 .container {
@@ -131,7 +131,7 @@ select {
   text-align: center;
   margin-top: 0.6rem;
   margin-bottom: 3.5rem;
-  position: relative; /* Adicionado para posicionar o input corretamente */
+  position: relative;
 }
 
 .custom-file-upload input[type="file"] {
@@ -226,15 +226,15 @@ select:focus {
 
 .selecionarTrilha {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); /* Cartões com largura mínima de 19rem */
-  gap: 1rem; /* Espaçamento entre os cartões */
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1rem;
   row-gap: 1rem;
-  justify-content: center; /* Centraliza os cartões no container */
+  justify-content: center;
 }
 
 .cartaoSelect {
   position: relative;
-  width: cal(100% - 1rem); /* Ocupa 100% da largura do grid cell */
+  width: cal(100% - 1rem);
   height: 7.5rem;
   padding: 1rem;
   border-radius: 0.625rem;
@@ -251,14 +251,14 @@ select:focus {
 .cartaoSelect::before {
   content: "";
   position: absolute;
-  top: 0.625rem; /* Posiciona a bolinha no canto superior esquerdo */
-  left: 0.625rem; /* Posiciona a bolinha no canto superior esquerdo */
+  top: 0.625rem;
+  left: 0.625rem;
   width: 1.17rem;
   height: 1.17rem;
-  border-radius: 50%; /* Torna o elemento circular */
-  border: 0.125rem solid var(--color-border); /* Borda da bolinha */
-  background: transparent; /* Fundo transparente */
-  transition: all 0.3s; /* Adiciona transição suave */
+  border-radius: 50%;
+  border: 0.125rem solid var(--color-border);
+  background: transparent;
+  transition: all 0.3s;
 }
 
 .cartaoSelect:hover {
