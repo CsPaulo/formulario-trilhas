@@ -215,6 +215,13 @@ select:focus {
   color: #666;
 }
 
+#fourLabel input {
+  background-color: var(--color-background);
+  border: 0.0625rem solid #ddd;
+  padding: 0.75rem;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+}
 
 #numero,
 #estado,
@@ -222,8 +229,6 @@ select:focus {
 #rua {
   width: 100%;
 }
-
-
 
 .selecionarTrilha {
   display: grid;
@@ -393,8 +398,4 @@ input.error {
   margin-top: 0.5rem;
   display: flex;
   flex-direction: row;
-}
-
-#cidade, #estado, #rua, #cidade label{
-  background-color: #b0b0b0;
 }
