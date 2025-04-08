@@ -485,3 +485,10 @@ input.error {
   height: auto;
   margin-top: 0; /* Remove margens adicionais */
 }
+
+.upload-status {
+  font-size: 0.9rem;
+  color: green;
+  margin-top: 0.5rem;
+  display: block;
+}
