@@ -154,6 +154,7 @@ input[type="date"],
 input[type="email"],
 input[type="tel"],
 input[type="file"],
+input[type="password"],
 select {
   color: #292524;
   width: 100%;
@@ -170,6 +171,7 @@ input[type="date"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="file"]:focus,
+input[type="password"]:focus,
 select:focus {
   border-color: var(--color-secondary);
   outline: none;
