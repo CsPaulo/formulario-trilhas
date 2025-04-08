@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <!-- Formulário de Login -->
+      <div class="login-form-container">
+        <h1>Login</h1>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-name">Nome</label>
+            <input type="text" id="login-name" name="login-name" required />
+          </div>
+          <div class="form-group">
+            <label for="login-email">E-mail</label>
+            <input type="email" id="login-email" name="login-email" required />
+          </div>
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+
+      <!-- Área de Imagem -->
+      <div class="login-image-container">
+        <img src="assets/ilustrations/Ilustration.png" alt="Ilustração Login" />
+        <img src="assets/logos/logo-trilhas.png" alt="Logo Trilhas Inova Maranhão" class="logo" />
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
