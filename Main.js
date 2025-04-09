@@ -3,6 +3,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputs = form?.querySelectorAll("input, select");
   const loginForm = document.getElementById("login-form"); // Formulário de login
 
+  const toggleDarkModeButton = document.getElementById("toggle-dark-mode");
+
+  toggleDarkModeButton.addEventListener("click", () => {
+    event.preventDefault(); // Impede o comportamento padrão do botão dentro do formulário
+    document.body.classList.toggle("dark-mode");
+
+    // Alterna o ícone do botão com base no estado atual
+    if (document.body.classList.contains("dark-mode")) {
+      toggleDarkModeButton.textContent = "☀️";
+    } else {
+      toggleDarkModeButton.textContent = "🌙";
+    }
+  });
+
   // Dados de exemplo pré-salvos
   const exampleUser = {
     nome: "Usuário Teste",
@@ -104,20 +118,18 @@ document.addEventListener("DOMContentLoaded", () => {
   function saveUserData() {
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Verifica se já existe um usuário com o mesmo CPF
     const cpf = document.getElementById("cpf").value;
     const userExists = users.some((user) => user.cpf === cpf);
 
     if (userExists) {
       showPopup("Erro: Já existe um usuário com este CPF.");
-      return; // Interrompe o processo de salvamento
+      return;
     }
 
-    // Gera um ID único para o usuário
-    const userId = Date.now(); // Usa o timestamp como ID único
+    const userId = Date.now();
 
     const userData = {
-      id: userId, // Adiciona o ID único
+      id: userId,
       nome: document.getElementById("nome").value,
       dataNascimento: document.getElementById("data-nascimento").value,
       cpf: cpf,
@@ -174,14 +186,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (input.files.length > 0) {
       const file = input.files[0];
 
-      // Verifica se o arquivo é uma imagem
       if (file.type.startsWith("image/")) {
         const reader = new FileReader();
         reader.onload = (e) => {
-          // Verifica se já existe uma imagem de pré-visualização
           let previewImage = uploadContent.querySelector(".upload-preview");
           if (!previewImage) {
-            // Cria a imagem de pré-visualização
             previewImage = document.createElement("img");
             previewImage.classList.add("upload-preview");
             previewImage.style.maxWidth = "100%";
@@ -192,13 +201,11 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           previewImage.src = e.target.result;
 
-          // Oculta o texto "Clique aqui para selecionar o arquivo"
           const uploadText = uploadContent.querySelector("p");
           if (uploadText) {
             uploadText.style.display = "none";
           }
 
-          // Oculta o ícone
           const uploadIcon = uploadContent.querySelector(".upload-icon");
           if (uploadIcon) {
             uploadIcon.style.display = "none";
@@ -208,7 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
         reader.readAsDataURL(file);
       } else {
-        // Exibe uma mensagem de erro se o arquivo não for uma imagem
         const uploadText = uploadContent.querySelector("p");
         if (uploadText) {
           uploadText.textContent = "Arquivo selecionado não é uma imagem.";
@@ -217,13 +223,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-  // Evento para o campo de identidade
   identidadeInput.addEventListener("change", () => {
     previewImage(identidadeInput, identidadeUploadContent);
     identidadeStatus.textContent = identidadeInput.files.length > 0 ? "Documento anexado: " + identidadeInput.files[0].name : "";
   });
 
-  // Evento para o campo de comprovante de residência
   comprovanteResidencalInput.addEventListener("change", () => {
     previewImage(comprovanteResidencalInput, comprovanteResidencalUploadContent);
     comprovanteResidencalStatus.textContent =

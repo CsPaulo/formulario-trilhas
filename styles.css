@@ -492,3 +492,99 @@ input.error {
   margin-top: 0.5rem;
   display: block;
 }
+
+/* Estilo do botão de modo escuro */
+.dark-mode-toggle {
+  display: flex;
+  justify-content: flex;
+}
+
+.dark-mode-button {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  border-radius: 50%; /* Torna o botão circular */
+  width: 2rem; /* Define a largura e altura */
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem; /* Tamanho do ícone */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-button:hover {
+  background-color: var(--color-hover);
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+body.dark-mode .dark-mode-button {
+  background-color: #444444;
+  color: #ffffff;
+}
+body.dark-mode {
+  background-color: #181818; /* Fundo principal mais suave */
+  color: #e0e0e0; /* Texto em tom claro */
+}
+
+body.dark-mode .form-container {
+  background-color: #202020; /* Fundo do formulário */
+  color: #e0e0e0; /* Texto do formulário */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5); /* Sombra mais escura */
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+  background-color: #2a2a2a; /* Fundo dos campos */
+  color: #ffffff; /* Texto dos campos */
+  border: 1px solid #444444; /* Borda mais suave */
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus,
+body.dark-mode button:focus {
+  border-color: var(--color-secondary); /* Destaque com a cor secundária */
+  box-shadow: 0 0 0.3125rem var(--color-secondary); /* Sombra de foco */
+}
+
+body.dark-mode a {
+  color: #1e90ff; /* Links em azul claro */
+}
+
+body.dark-mode .custom-file-upload {
+  background-color: #2a2a2a; /* Fundo do upload */
+  border: 1px dashed #555555; /* Borda mais suave */
+}
+
+body.dark-mode .custom-file-upload:hover {
+  border-color: var(--color-secondary); /* Destaque ao passar o mouse */
+}
+
+body.dark-mode .dark-mode-button {
+  background-color: #444444; /* Fundo do botão no modo escuro */
+  color: #ffffff; /* Cor do ícone */
+}
+
+body.dark-mode .dark-mode-button:hover {
+  background-color: var(--color-hover); /* Destaque ao passar o mouse */
+}
+
+body.dark-mode .cartaoSelect {
+  background-color: #2a2a2a; /* Fundo dos cartões */
+  border: 1px solid #444444; /* Borda dos cartões */
+}
+
+body.dark-mode .cartaoSelect:hover {
+  border-color: var(--color-checked); /* Destaque ao passar o mouse */
+}
+
+body.dark-mode .cartaoSelect img {
+  filter: brightness(0.8); /* Ajusta o brilho das imagens no modo escuro */
+}
+
+body.dark-mode .selecionarTrilha input[type="radio"]:checked + .cartaoSelect {
+  border-color: var(--color-checked); /* Destaque ao selecionar */
+}
