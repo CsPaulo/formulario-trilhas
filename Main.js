@@ -102,10 +102,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function saveUserData() {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Verifica se já existe um usuário com o mesmo CPF
+    const cpf = document.getElementById("cpf").value;
+    const userExists = users.some((user) => user.cpf === cpf);
+
+    if (userExists) {
+      showPopup("Erro: Já existe um usuário com este CPF.");
+      return; // Interrompe o processo de salvamento
+    }
+
+    // Gera um ID único para o usuário
+    const userId = Date.now(); // Usa o timestamp como ID único
+
     const userData = {
+      id: userId, // Adiciona o ID único
       nome: document.getElementById("nome").value,
       dataNascimento: document.getElementById("data-nascimento").value,
-      cpf: document.getElementById("cpf").value,
+      cpf: cpf,
       sexo: document.getElementById("sexo").value,
       email: document.getElementById("email").value,
       senha: document.getElementById("senha").value,
@@ -114,9 +129,14 @@ document.addEventListener("DOMContentLoaded", () => {
       rua: document.getElementById("rua").value,
       cidade: document.getElementById("cidade").value,
       estado: document.getElementById("estado").value,
+      trilhaEscolhida: document.querySelector('input[name="curso"]:checked')?.value || "Nenhuma", // Obtém a trilha escolhida
+      imagens: {
+        identidade: identidadeInput.files[0] ? URL.createObjectURL(identidadeInput.files[0]) : null, // Salva a URL da imagem de identidade
+        comprovanteResidencia: comprovanteResidencalInput.files[0] ? URL.createObjectURL(comprovanteResidencalInput.files[0]) : null, // Salva a URL da imagem de residência
+      },
     };
 
-    const users = JSON.parse(localStorage.getItem("users")) || [];
+    // Adiciona o novo usuário à lista e salva no localStorage
     users.push(userData);
     localStorage.setItem("users", JSON.stringify(users));
 
