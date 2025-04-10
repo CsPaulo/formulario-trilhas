@@ -1,0 +1,601 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-primary: #2135a6;
+  --color-secondary: #f3541c;
+  --color-text: #57534e;
+  --color-border: #ccc;
+  --color-background: #fff;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-hover: #0056b3;
+  --color-checked: #ff5722;
+  --color-error: #dc2626;
+  --color-buttonhover: rgb(184, 62, 10);
+  --color-disablesurface: #e7e5e4;
+  --color-bordersurface: #d6d3d1;
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.form-container {
+  background-color: var(--color-background);
+  flex: 1;
+  width: 48rem;
+  padding: 4rem;
+  box-sizing: border-box;
+  box-shadow: 0 0.25rem 0.5rem var(--color-shadow);
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.form-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.form-container {
+  scrollbar-width: none;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+}
+
+.back-button:hover {
+  color: var(--color-hover);
+}
+
+.back-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.3rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text);
+  padding-bottom: 2.5rem;
+}
+
+.p-trilha {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text);
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("assets/icons/arrow-down.png") no-repeat right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2rem;
+}
+
+.custom-file-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 3.5rem 0 0 0;
+  border: 0.125rem dashed var(--color-border);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: var(--color-background);
+  cursor: pointer;
+  text-align: center;
+  margin-top: 0.6rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+.upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-content img.upload-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 0.1rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+input[type="password"],
+select {
+  color: #292524;
+  width: 100%;
+  padding: 0.75rem;
+  border: 0.0625rem solid var(--color-border);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="file"]:focus,
+input[type="password"]:focus,
+select:focus {
+  border-color: var(--color-secondary);
+  outline: none;
+  box-shadow: 0 0 0.3125rem var(--color-secondary);
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+}
+
+.logo {
+  max-width: 30%;
+  height: auto;
+  padding: 0;
+}
+
+.imagem {
+  max-width: 80%;
+  height: auto;
+  padding: 0;
+}
+
+#fourLabel {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+#fourLabel div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 1rem;
+}
+
+#fourLabel label {
+  margin-bottom: 0.25rem;
+  margin-top: 1.2rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+#numero,
+#estado,
+#cidade,
+#rua {
+  width: 100%;
+}
+
+.selecionarTrilha {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1rem;
+  row-gap: 1rem;
+  justify-content: center;
+}
+
+.cartaoSelect {
+  position: relative;
+  width: cal(100% - 1rem);
+  height: 7.5rem;
+  padding: 1rem;
+  border-radius: 0.625rem;
+  border: 0.125rem solid var(--color-border);
+  background: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cartaoSelect::before {
+  content: "";
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  width: 1.17rem;
+  height: 1.17rem;
+  border-radius: 50%;
+  border: 0.125rem solid var(--color-border);
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.cartaoSelect:hover {
+  border-color: var(--color-checked);
+}
+
+.cartaoSelect img {
+  padding-top: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.selecionarTrilha input[type="radio"] {
+  display: none;
+}
+
+.selecionarTrilha input[type="radio"]:checked + .cartaoSelect {
+  border-color: var(--color-checked);
+  box-shadow: 0 0 0.625rem rgba(255, 87, 34, 0.5);
+}
+
+.selecionarTrilha input[type="radio"]:checked + .cartaoSelect::before {
+  display: none;
+}
+
+.selecionarTrilha input[type="radio"]:checked + .cartaoSelect::after {
+  content: "✔";
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  background: var(--color-checked);
+  color: var(--color-background);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-group input[type="checkbox"] {
+  margin-top: 2rem;
+  margin-bottom: -0.145rem;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 0.125rem solid var(--color-border);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-group input[type="checkbox"]:checked {
+  background-color: var(--color-checked);
+  border-color: var(--color-checked);
+}
+
+.form-group input[type="checkbox"]:checked::before {
+  content: "✔";
+  color: var(--color-background);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-group label a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.form-group label a:hover {
+  color: var(--color-buttonhover);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  justify-content: flex-end;
+}
+
+.button-group button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cancelar {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: 0.1rem solid var(--color-secondary);
+}
+
+.btn-cancelar:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-inscricao {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  border: none;
+}
+
+.btn-inscricao:hover {
+  background-color: var(--color-buttonhover);
+}
+
+.error-icon {
+  margin-top: 0.17rem;
+  margin-right: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+}
+input.error {
+  border: 2px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+#cidade,
+#estado,
+#rua,
+#cidade label {
+  background-color: var(--color-disablesurface);
+  border: var(--color-bordersurface);
+}
+
+/* Estilo para a tela de login */
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.login-form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  background-color: var(--color-background);
+  box-shadow: 0 0.25rem 0.5rem var(--color-shadow);
+}
+
+.login-form-container h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#login-form {
+  width: 100%;
+}
+
+#login-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+#login-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+#login-form input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+#login-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#login-form button:hover {
+  background-color: var(--color-buttonhover);
+}
+
+/* Estilo para a área de imagem na tela de login */
+.login-image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Alinha os elementos em coluna */
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+}
+
+.login-image-container img {
+  max-width: 80%;
+  height: auto;
+}
+
+.login-image-container .logo {
+  max-width: 30%; /* Ajusta o tamanho da logo */
+  height: auto;
+  margin-top: 0; /* Remove margens adicionais */
+}
+
+.upload-status {
+  font-size: 0.9rem;
+  color: green;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Estilo do botão de modo escuro */
+.dark-mode-toggle {
+  display: flex;
+  justify-content: flex;
+}
+
+.dark-mode-button {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  border-radius: 50%; /* Torna o botão circular */
+  width: 2rem; /* Define a largura e altura */
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem; /* Tamanho do ícone */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-button:hover {
+  background-color: var(--color-hover);
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+body.dark-mode .dark-mode-button {
+  background-color: #444444;
+  color: #ffffff;
+}
+body.dark-mode {
+  background-color: #181818; /* Fundo principal mais suave */
+  color: #e0e0e0; /* Texto em tom claro */
+}
+
+body.dark-mode .form-container {
+  background-color: #202020; /* Fundo do formulário */
+  color: #e0e0e0; /* Texto do formulário */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5); /* Sombra mais escura */
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+  background-color: #2a2a2a; /* Fundo dos campos */
+  color: #ffffff; /* Texto dos campos */
+  border: 1px solid #444444; /* Borda mais suave */
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus,
+body.dark-mode button:focus {
+  border-color: var(--color-secondary); /* Destaque com a cor secundária */
+  box-shadow: 0 0 0.3125rem var(--color-secondary); /* Sombra de foco */
+}
+
+body.dark-mode a {
+  color: #1e90ff; /* Links em azul claro */
+}
+
+body.dark-mode .custom-file-upload {
+  background-color: #2a2a2a; /* Fundo do upload */
+  border: 1px dashed #555555; /* Borda mais suave */
+}
+
+body.dark-mode .custom-file-upload:hover {
+  border-color: var(--color-secondary); /* Destaque ao passar o mouse */
+}
+
+body.dark-mode .dark-mode-button {
+  background-color: #444444; /* Fundo do botão no modo escuro */
+  color: #ffffff; /* Cor do ícone */
+}
+
+body.dark-mode .dark-mode-button:hover {
+  background-color: var(--color-hover); /* Destaque ao passar o mouse */
+}
+
+body.dark-mode .cartaoSelect {
+  background-color: #2a2a2a; /* Fundo dos cartões */
+  border: 1px solid #444444; /* Borda dos cartões */
+}
+
+body.dark-mode .cartaoSelect:hover {
+  border-color: var(--color-checked); /* Destaque ao passar o mouse */
+}
+
+body.dark-mode .cartaoSelect img {
+  filter: brightness(0.8); /* Ajusta o brilho das imagens no modo escuro */
+}
+
+body.dark-mode .selecionarTrilha input[type="radio"]:checked + .cartaoSelect {
+  border-color: var(--color-checked); /* Destaque ao selecionar */
+}
+
+.button-IrCadastro{
+  text-decoration: none; /* Remove sublinhado */
+  color: var(--color-text);        /* Cor do link */
+  font-size: 1rem;
+  padding-top: 10rem;
+}
+
+.button-IrCadastro:hover{
+  text-decoration: underline;
+}
