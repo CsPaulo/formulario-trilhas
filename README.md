@@ -21,5 +21,4 @@ Este projeto é um formulário de inscrição e login desenvolvido para alunos d
 - Validação dos campos preenchidos
 - Preenchimento obrigatório de todos os campos
 - Exibição de mensagens de erro em caso de campos vazios
-- Suporte ao modo escuro
 - Armazenamento local das informações preenchidas
