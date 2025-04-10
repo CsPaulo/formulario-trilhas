@@ -160,11 +160,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function verifyLogin() {
-    const email = document.getElementById("login-email").value;
+    const cpf = document.getElementById("login-cpf").value;
     const senha = document.getElementById("login-senha").value;
 
     const users = JSON.parse(localStorage.getItem("users")) || [];
-    const userExists = users.some((user) => user.email === email && user.senha === senha);
+    const userExists = users.some((user) => user.cpf === cpf && user.senha === senha);
 
     if (userExists) {
       showPopup("Login bem-sucedido! Usuário encontrado.");

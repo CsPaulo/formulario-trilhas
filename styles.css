@@ -461,6 +461,12 @@ input.error {
   font-weight: 600;
 }
 
+#login-form a{
+      display: flex;
+      justify-content: center; /* Centraliza horizontalmente */
+      align-items: center;
+}
+
 #login-form button:hover {
   background-color: var(--color-buttonhover);
 }
@@ -593,7 +599,7 @@ body.dark-mode .selecionarTrilha input[type="radio"]:checked + .cartaoSelect {
   text-decoration: none; /* Remove sublinhado */
   color: var(--color-text);        /* Cor do link */
   font-size: 1rem;
-  padding-top: 10rem;
+  padding-top: 1rem;
 }
 
 .button-IrCadastro:hover{
