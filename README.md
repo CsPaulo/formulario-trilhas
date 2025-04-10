@@ -8,6 +8,7 @@
   * HTML 5
   * CSS 3
   * JavaScript
+
 ##Principais funcionalidades.
   Análise se o valor do campo digitado está correto
   Preenchimento obrigatório de todos os campos
