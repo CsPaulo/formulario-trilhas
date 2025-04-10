@@ -3,22 +3,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputs = form?.querySelectorAll("input, select");
   const loginForm = document.getElementById("login-form"); // Formulário de login
 
-  // Dados de exemplo pré-salvos
-  const exampleUser = {
-    nome: "Usuário Teste",
-    dataNascimento: "01/01/2000",
-    cpf: "000.000.000-00",
-    sexo: "masculino",
-    email: "teste@gmail.com",
-    senha: "teste123",
-    telefone: "(00) 00000-0000",
-    cep: "00000000",
-    rua: "Rua Existente X",
-    cidade: "Imperatriz",
-    estado: "Maranhão",
-  };
-  localStorage.setItem("users", JSON.stringify([exampleUser]));
-
+  // Verifica se já existem usuários no localStorage
+  if (!localStorage.getItem("users")) {
+    const exampleUser = {
+      nome: "Usuário Teste",
+      dataNascimento: "01/01/2000",
+      cpf: "000.000.000-00",
+      sexo: "masculino",
+      email: "teste@gmail.com",
+      senha: "teste123",
+      telefone: "(00) 00000-0000",
+      cep: "00000000",
+      rua: "Rua Existente X",
+      cidade: "Imperatriz",
+      estado: "Maranhão",
+    };
+    localStorage.setItem("users", JSON.stringify([exampleUser]));
+  }
   if (inputs) {
     inputs.forEach((input) => {
       input.addEventListener("blur", validateInput);
