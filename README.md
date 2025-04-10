@@ -1,6 +1,6 @@
 # formulario-trilhas
 ## O que é o projeto.
-  O projeto de trata de um formulario de inscrição/login para um aluno do trilhas <br>
+  O projeto se trata de um formulario de inscrição/login para um aluno do trilhas <br>
 ## Como rodar localmente.
   após o dowload do zip no repositório do github <br>
   abrir e executar o login.html <br>
