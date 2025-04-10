@@ -9,7 +9,7 @@
   * CSS 3
   * JavaScript
 ## Principais funcionalidades.
-  Análise se o valor do campo digitado está correto <br>
+  Análisa se o valor do campo digitado está correto <br>
   Preenchimento obrigatório de todos os campos <br>
   Exibição de mensagens de erro em todos os campos caso não preenchidos <br> 
   Modo escuro <br>
