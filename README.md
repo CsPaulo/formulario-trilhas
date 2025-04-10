@@ -12,5 +12,5 @@
   Análise se o valor do campo digitado está correto <br>
   Preenchimento obrigatório de todos os campos <br>
   Exibição de mensagens de erro em todos os campos caso não preenchidos <br> 
-  modo escuro <br>
-  salvamento de dados(localmente) <br>
+  Modo escuro <br>
+  Armazenamento dos campos preenchidos(localmente) <br>
