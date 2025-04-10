@@ -3,20 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputs = form?.querySelectorAll("input, select");
   const loginForm = document.getElementById("login-form"); // Formulário de login
 
-  const toggleDarkModeButton = document.getElementById("toggle-dark-mode");
-
-  toggleDarkModeButton.addEventListener("click", () => {
-    event.preventDefault(); // Impede o comportamento padrão do botão dentro do formulário
-    document.body.classList.toggle("dark-mode");
-
-    // Alterna o ícone do botão com base no estado atual
-    if (document.body.classList.contains("dark-mode")) {
-      toggleDarkModeButton.textContent = "☀️";
-    } else {
-      toggleDarkModeButton.textContent = "🌙";
-    }
-  });
-
   // Dados de exemplo pré-salvos
   const exampleUser = {
     nome: "Usuário Teste",
@@ -160,11 +146,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function verifyLogin() {
-    const email = document.getElementById("login-email").value;
+    const cpf = document.getElementById("login-cpf").value;
     const senha = document.getElementById("login-senha").value;
 
     const users = JSON.parse(localStorage.getItem("users")) || [];
-    const userExists = users.some((user) => user.email === email && user.senha === senha);
+    const userExists = users.some((user) => user.cpf === cpf && user.senha === senha);
 
     if (userExists) {
       showPopup("Login bem-sucedido! Usuário encontrado.");
