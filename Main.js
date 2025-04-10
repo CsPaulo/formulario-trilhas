@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".form-container");
   const inputs = form?.querySelectorAll("input, select");
-  const loginForm = document.getElementById("login-form"); // Formulário de login
+  const loginForm = document.getElementById("login-form");
 
-  // Verifica se já existem usuários no localStorage
   if (!localStorage.getItem("users")) {
     const exampleUser = {
       nome: "Usuário Teste",
@@ -128,10 +127,10 @@ document.addEventListener("DOMContentLoaded", () => {
       rua: document.getElementById("rua").value,
       cidade: document.getElementById("cidade").value,
       estado: document.getElementById("estado").value,
-      trilhaEscolhida: document.querySelector('input[name="curso"]:checked')?.value || "Nenhuma", // Obtém a trilha escolhida
+      trilhaEscolhida: document.querySelector('input[name="curso"]:checked')?.value || "Nenhuma",
       imagens: {
-        identidade: identidadeInput.files[0] ? URL.createObjectURL(identidadeInput.files[0]) : null, // Salva a URL da imagem de identidade
-        comprovanteResidencia: comprovanteResidencalInput.files[0] ? URL.createObjectURL(comprovanteResidencalInput.files[0]) : null, // Salva a URL da imagem de residência
+        identidade: identidadeInput.files[0] ? URL.createObjectURL(identidadeInput.files[0]) : null,
+        comprovanteResidencia: comprovanteResidencalInput.files[0] ? URL.createObjectURL(comprovanteResidencalInput.files[0]) : null,
       },
     };
 
@@ -198,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
             uploadIcon.style.display = "none";
           }
           const customFileUpload = uploadContent.closest(".custom-file-upload");
-          customFileUpload.style.padding = "0"; // Remove o padding
+          customFileUpload.style.padding = "0";
         };
         reader.readAsDataURL(file);
       } else {
